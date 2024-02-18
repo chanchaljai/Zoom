@@ -20,9 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
-        android:id="@+id/email"
+        android:id="@+id/email2"
         android:layout_marginTop="210dp"
-        android:hint="Email"/>
+        android:hint="email"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -30,12 +30,13 @@
         android:ems="15"
         android:id="@+id/pass"
         android:layout_marginTop="300dp"
-        android:hint="Password"/>
+        android:hint="password2"/>
     <Button
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="430dp"
         android:text="Login"
+        android:id="@+id/btn2"
         android:layout_marginLeft="90dp"/>
 
     <TextView
@@ -52,7 +53,7 @@
         android:layout_marginTop="500dp"
         android:layout_marginLeft="250dp"
         android:textStyle="bold"
-        android:id="@+id/signup"
+        android:id="@+id/signup2"
         android:textSize="17sp"/>
 
 
