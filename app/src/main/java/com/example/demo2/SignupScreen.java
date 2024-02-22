@@ -42,16 +42,21 @@ public class SignupScreen extends AppCompatActivity {
             public void onClick(View view) {
                 String name = edtName.getText().toString();
                 String email = edtEmail.getText().toString();
-                String pass = edtPassword.getText().toString();
+                String password = edtPassword.getText().toString();
 
-                if(!name.isEmpty() && !email.isEmpty() && !pass.isEmpty()){
-                    mAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                if(!name.isEmpty() && !email.isEmpty() && !password.isEmpty()){
+
+                    mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(SignupScreen.this, "Account successfully created", Toast.LENGTH_SHORT).show();
+                                Intent s1 = new Intent(SignupScreen.this,LoginScreen.class);
+                                startActivity(s1);
+
                             }else {
                                 Toast.makeText(SignupScreen.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
+
                             }
                         }
                     });
@@ -59,8 +64,7 @@ public class SignupScreen extends AppCompatActivity {
                     Toast.makeText(SignupScreen.this, "Please fill empty field", Toast.LENGTH_SHORT).show();
 
                 }
-                Intent s1 = new Intent(SignupScreen.this,LoginScreen.class);
-                startActivity(s1);
+
             }
 
         });
